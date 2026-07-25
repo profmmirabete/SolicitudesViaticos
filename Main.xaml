@@ -1,0 +1,408 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upap="clr-namespace:UiPath.PDF.Activities.PDF;assembly=UiPath.PDF.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.PDF.Activities.PDF</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1561,4447" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="548,4424" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="upr:ILocalResource" Name="archivoCSV" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dtSolicitudes" />
+        <Variable x:TypeArguments="s:String[]" Name="archivosPDF" />
+        <Variable x:TypeArguments="x:Boolean" Name="existeCSV" />
+        <Variable x:TypeArguments="x:String" Name="rutaOrigen" />
+        <Variable x:TypeArguments="x:String" Name="rutaCSV" />
+        <Variable x:TypeArguments="x:Int32" Name="idx" />
+        <Variable x:TypeArguments="x:String" Name="botonPresionado" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign - Ruta Origen" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[rutaOrigen]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["C:\Users\m3rg\OneDrive\Documentos\WorkSpace\UiPath\SolicitudesViaticos\formularios_solicitudes_viaticos"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - Ruta CSV Salida" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[rutaCSV]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["C:\Users\m3rg\OneDrive\Documentos\WorkSpace\UiPath\SolicitudesViaticos\Reporte_Solicitudes_Viaticos.csv"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message - Inicio Proceso" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio del procesamiento de solicitudes de viÃ¡ticos. Buscando PDFs en: &quot; + rutaOrigen]" />
+      <ui:BuildDataTable DataTable="[dtSolicitudes]" DisplayName="Build Data Table - Estructura 22 Columnas" sap:VirtualizedContainerService.HintSize="514,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;NumeroSolicitud&quot; msdata:Caption=&quot;NÃºmero de Solicitud&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FechaEmision&quot; msdata:Caption=&quot;Fecha de EmisiÃ³n&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Organismo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Estado&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Nombre&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CUIL_CUIT&quot; msdata:Caption=&quot;CUIL/CUIT&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Legajo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Categoria&quot; msdata:Caption=&quot;CategorÃ­a&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Reparticion&quot; msdata:Caption=&quot;ReparticiÃ³n&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Motivo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Destino&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Disposicion&quot; msdata:Caption=&quot;DisposiciÃ³n&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Inicio&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Finalizacion&quot; msdata:Caption=&quot;FinalizaciÃ³n&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Duracion&quot; msdata:Caption=&quot;DuraciÃ³n&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TarifaDiaria&quot; msdata:Caption=&quot;Tarifa diaria&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Dias&quot; msdata:Caption=&quot;DÃ­as&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;MontoViaticos&quot; msdata:Caption=&quot;Monto viÃ¡ticos&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;GastosAdicionales&quot; msdata:Caption=&quot;Gastos adicionales&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Autorizante&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Tesoreria&quot; msdata:Caption=&quot;TesorerÃ­a&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <Assign DisplayName="Assign - Obtener Lista PDFs" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[archivosPDF]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(rutaOrigen, "*.pdf")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message - Total PDFs Encontrados" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Total de archivos PDF encontrados: &quot; + archivosPDF.Length.ToString()]" />
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[idx]" DisplayName="For Each - Procesar cada PDF" sap:VirtualizedContainerService.HintSize="514,1708" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[archivosPDF]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="archivoActual" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Procesar PDF Individual" sap:VirtualizedContainerService.HintSize="512,1577" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="textoPDF" />
+                <Variable x:TypeArguments="x:String" Name="numeroSolicitud" />
+                <Variable x:TypeArguments="x:String" Name="fechaEmision" />
+                <Variable x:TypeArguments="x:String" Name="organismo" />
+                <Variable x:TypeArguments="x:String" Name="estado" />
+                <Variable x:TypeArguments="x:String" Name="nombre" />
+                <Variable x:TypeArguments="x:String" Name="cuilCuit" />
+                <Variable x:TypeArguments="x:String" Name="legajo" />
+                <Variable x:TypeArguments="x:String" Name="categoria" />
+                <Variable x:TypeArguments="x:String" Name="reparticion" />
+                <Variable x:TypeArguments="x:String" Name="motivo" />
+                <Variable x:TypeArguments="x:String" Name="destino" />
+                <Variable x:TypeArguments="x:String" Name="disposicion" />
+                <Variable x:TypeArguments="x:String" Name="inicio" />
+                <Variable x:TypeArguments="x:String" Name="finalizacion" />
+                <Variable x:TypeArguments="x:String" Name="duracion" />
+                <Variable x:TypeArguments="x:String" Name="tarifaDiaria" />
+                <Variable x:TypeArguments="x:String" Name="dias" />
+                <Variable x:TypeArguments="x:String" Name="montoViaticos" />
+                <Variable x:TypeArguments="x:String" Name="gastosAdicionales" />
+                <Variable x:TypeArguments="x:String" Name="total" />
+                <Variable x:TypeArguments="x:String" Name="autorizante" />
+                <Variable x:TypeArguments="x:String" Name="tesoreria" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message - Archivo en Proceso" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Procesando archivo PDF (&quot; + (idx + 1).ToString() + &quot;/&quot; + archivosPDF.Length.ToString() + &quot;): &quot; + Path.GetFileName(archivoActual)]" />
+              <ui:ReadPDFText PreserveFormatting="{x:Null}" ResourceFile="{x:Null}" DisplayName="Leer texto en PDF" FileName="[archivoActual.Replace(&quot;\\&quot;, &quot;/&quot;)]" sap:VirtualizedContainerService.HintSize="478,124" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[textoPDF]">
+                <ui:ReadPDFText.Item>
+                  <upap:ItemArgument x:TypeArguments="upr:IResource" ResourceFile="{x:Null}" FileName="[archivoActual.Replace(&quot;\\&quot;, &quot;/&quot;)]" />
+                </ui:ReadPDFText.Item>
+              </ui:ReadPDFText>
+              <ui:MultipleAssign DisplayName="Multiple Assign - Extraer 22 Campos con Regex" sap:VirtualizedContainerService.HintSize="478,800" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="22">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[numeroSolicitud]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Número\s+de\s+Solicitud\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[fechaEmision]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Fecha\s+de\s+Emisión\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[organismo]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Organismo\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[estado]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Estado\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[nombre]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Nombre\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[cuilCuit]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=CUIL\s*/\s*CUIT\s*[:\-]?\s*)[\d\-]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[legajo]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Legajo\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[categoria]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Categor[Ã­i]a\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[reparticion]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Repartici[Ã³o]n\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[motivo]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Motivo\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[destino]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Destino\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[disposicion]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Disposici[Ã³o]n\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[inicio]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Inicio\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[finalizacion]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Finalizaci[Ã³o]n\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[duracion]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Duraci[Ã³o]n\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[tarifaDiaria]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Tarifa\s+diaria\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[dias]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=D[iÃ­]as\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[montoViaticos]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Monto\s+vi[Ã¡a]ticos\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[gastosAdicionales]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Gastos\s+adicionales\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[total]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Total\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[autorizante]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Autorizante\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[tesoreria]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(textoPDF, "(?i)(?&lt;=Tesorer[iÃ­]a\s*[:\-]?\s*)[^\r\n]+").Value.Trim()]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Agrega fila con los 22 campos extraÃ­dos" ArrayRow="[{numeroSolicitud, fechaEmision, organismo, estado, nombre, cuilCuit, legajo, categoria, reparticion, motivo, destino, disposicion, inicio, finalizacion, duracion, tarifaDiaria, dias, montoViaticos, gastosAdicionales, total, autorizante, tesoreria}]" DataTable="[dtSolicitudes]" DisplayName="Add Data Row - Guardar Fila" sap:VirtualizedContainerService.HintSize="478,252" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AddDataRow>
+              <ui:LogMessage DisplayName="Log Message - Fila Guardada" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Fila agregada correctamente para la solicitud: &quot; + numeroSolicitud + &quot; | Archivo: &quot; + Path.GetFileName(archivoActual)]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+      <ui:PathExists DisplayName="Obtener archivo o carpeta local" Exists="[existeCSV]" sap:VirtualizedContainerService.HintSize="514,174" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[rutaCSV]" PathType="File" Resource="[archivoCSV]" />
+      <If Condition="[existeCSV]" DisplayName="If - CSV Existe?" sap:VirtualizedContainerService.HintSize="514,579" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <Sequence DisplayName="Elimina el CSV" sap:VirtualizedContainerService.HintSize="450,350" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeleteFileX Path="{x:Null}" DisplayName="Eliminar archivo" FileResource="[archivoCSV]" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" />
+            <ui:LogMessage DisplayName="Log Message - CSV Merge OK" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Se elimina CSV existente: &quot; + rutaCSV]" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:CreateFile Path="{x:Null}" PathResource="{x:Null}" ContinueOnError="True" DisplayName="Crear archivo" sap:VirtualizedContainerService.HintSize="514,176" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[rutaCSV]" Output="[archivoCSV]" />
+      <ui:AppendWriteCsvFile FilePath="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[dtSolicitudes]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Escribir CSV" sap:VirtualizedContainerService.HintSize="514,273" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_1" PathResource="[archivoCSV]" ShouldQuote="True" />
+      <ui:LogMessage DisplayName="Log Message - CSV Creado OK" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Archivo CSV creado exitosamente: &quot; + rutaCSV]" />
+      <ui:LogMessage DisplayName="Log Message - Proceso Finalizado" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Proceso finalizado. Total de solicitudes procesadas: &quot; + dtSolicitudes.Rows.Count.ToString()]" />
+      <ui:MessageBox AutoCloseAfter="00:00:00" Caption="Procesamiento de Viáticos" ChosenButton="[botonPresionado]" DisplayName="Message Box - Notificación Final" sap:VirtualizedContainerService.HintSize="514,114" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;El proceso ha concluido exitosamente.&quot; + Environment.NewLine + &quot;Total de solicitudes procesadas: &quot; + dtSolicitudes.Rows.Count.ToString()]" />
+    </Sequence>
+  </Sequence>
+</Activity>

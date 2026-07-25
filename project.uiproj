@@ -1,0 +1,6 @@
+{
+  "Name": "SolicitudesViaticos",
+  "ProjectType": "Process",
+  "Description": "Procesar Solicitudes de Viáticos - Extrae datos de PDFs y genera CSV",
+  "MainFile": "Main.xaml"
+}
