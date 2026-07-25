@@ -34,21 +34,51 @@ Vamos a diseñar este flujo de trabajo paso a paso. Construiremos un bot básico
 | rutaCSV           | System.String         | Sequence (Main) | Constante: "..\\Reporte_Solicitudes_Viaticos.csv"          |
 
 ## Secuencia de Actividades en UiPath
-El flujo completo en Main.xaml (dentro de un Sequence principal) debe contener estas actividades en orden:
-1. **\`Log Message\`** - Inicio del proceso
-2. **\`Build Data Table\`** - Crear estructura de 22 columnas
-3. **\`Assign\`** - Inicializar array de archivos
-4. **\`For Each File in Folder\`** - Iterar PDFs
-    * **\`Log Message\`** - Archivo actual
-    * **\`Read PDF Text\`** - Extraer texto del PDF
-    * **\`Assign\`** (x22) - Extraer cada campo con Regex o String manipulation
-    * **\`Add Data Row\`** - Insertar fila en DataTable
-    * **\`Log Message\`** - Fila guardada
-5. **\`If\`** - Verificar si CSV existe
-    * **\`Then\`**: **\`Write CSV\`** (con encabezados)
-    * **\`Else\`**: **\`Append CSV\`** (sin encabezados)
-6. **\`Log Message\`** - Proceso finalizado
-7. **\`Message Box\`** - Notificación al usuario
+
+```mermaid
+flowchart TD
+    Start([Inicio]) --> A1["Asignar rutas<br/>Origen: carpeta PDFs<br/>Salida: archivo CSV"]
+    A1 --> A2["Log: Inicio del procesamiento"]
+    A2 --> A3["Crear DataTable<br/>22 columnas"]
+    A3 --> A4["Obtener lista de<br/>archivos PDF"]
+    A4 --> A5["Log: Total PDFs encontrados"]
+    A5 --> B1{Hay PDFs?}
+    B1 -->|Sí| C1["For Each PDF"]
+    B1 -->|No| D1["Verificar si existe CSV previo"]
+    
+    subgraph Loop["Procesar cada PDF"]
+        C1 --> C2["Log: Archivo en proceso<br/>(índice / total)"]
+        C2 --> C3["Read PDF Text<br/>Extraer texto completo"]
+        C3 --> C4["Multiple Assign<br/>Extraer 22 campos con Regex"]
+        C4 --> C5["Add Data Row<br/>Guardar en DataTable"]
+        C5 --> C6["Log: Fila guardada"]
+        C6 --> C1
+    end
+    
+    C6 --> D1
+    D1 --> D2{CSV existe?}
+    D2 -->|Sí| D3["Delete File<br/>Eliminar CSV previo"]
+    D2 -->|No| D4["Crear archivo CSV"]
+    D3 --> D4
+    D4 --> D5["Append/Write CSV<br/>Escribir con headers"]
+    D5 --> D6["Log: CSV creado exitosamente"]
+    D6 --> D7["Log: Proceso finalizado<br/>Total solicitudes procesadas"]
+    D7 --> D8["Message Box<br/>Notificación al usuario"]
+    D8 --> End([Fin])
+```
+
+**Resumen del flujo:**
+
+| Paso | Actividad | Descripción |
+|------|-----------|-------------|
+| 1 | Asignar rutas | Define carpeta de PDFs y ruta del CSV de salida |
+| 2 | Crear DataTable | Estructura con 22 columnas (Número Solicitud, Fecha, Organismo, Estado, Nombre, CUIL/CUIT, Legajo, Categoría, Repartición, Motivo, Destino, Disposición, Inicio, Finalización, Duración, Tarifa diaria, Días, Monto viáticos, Gastos adicionales, Total, Autorizante, Tesorería) |
+| 3 | Obtener PDFs | `Directory.GetFiles` filtrando `*.pdf` |
+| 4 | Loop For Each | Por cada PDF: lee texto, extrae campos con Regex, agrega fila |
+| 5 | Gestionar CSV | Si existe CSV previo, lo elimina; crea nuevo y escribe datos |
+| 6 | Notificación | Log final y Message Box al usuario |
+
+
 
 ## Configuración de Propiedades
 ### **Actividad 1: Log Message (Inicio)**
